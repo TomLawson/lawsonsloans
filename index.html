@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lawsons Loans - Premium Friend Banking Since Forever</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+            background: linear-gradient(-45deg, #667eea, #764ba2, #f093fb, #f5576c);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+        }
+
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            padding: 2rem;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            z-index: 2;
+        }
+
+        .logo {
+            font-size: 4rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .tagline {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            animation: slideInUp 1s ease-out 0.5s both;
+        }
+
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 0.9;
+                transform: translateY(0);
+            }
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255,255,255,0.3);
+            transition: all 0.3s ease;
+            animation: slideInUp 1s ease-out 1s both;
+        }
+
+        .cta-button:hover {
+            background: rgba(255,255,255,0.3);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        .services {
+            background: rgba(255,255,255,0.95);
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .services h2 {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 3rem;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            border: 3px solid transparent;
+            background-clip: padding-box;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            border-color: #667eea;
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        .service-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .testimonials {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            padding: 4rem 2rem;
+            color: white;
+            text-align: center;
+        }
+
+        .testimonials h2 {
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .testimonial {
+            background: rgba(255,255,255,0.1);
+            padding: 2rem;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .stats {
+            background: rgba(255,255,255,0.1);
+            padding: 3rem 2rem;
+            text-align: center;
+            color: white;
+            backdrop-filter: blur(10px);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .stat {
+            padding: 1rem;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .logo {
+                font-size: 2.5rem;
+            }
+            
+            .tagline {
+                font-size: 1.2rem;
+            }
+            
+            .hero {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="logo">💰 Lawsons Loans</h1>
+            <p class="tagline">Reluctant Generosity & Professional Tab Collection</p>
+            <p style="font-size: 1.1rem; margin-bottom: 2rem; opacity: 0.8;">
+                "I'll get this one, you can pay me back later" - Licensed by the Department of Good Intentions
+            </p>
+            <a href="#services" class="cta-button">Apply for Friendship Credit</a>
+        </div>
+    </section>
+
+    <section class="stats">
+        <div class="stats-grid">
+            <div class="stat">
+                <span class="stat-number">∞</span>
+                <span>Group Tabs Collected</span>
+            </div>
+            <div class="stat">
+                <span class="stat-number">24/7</span>
+                <span>Wallet Availability</span>
+            </div>
+            <div class="stat">
+                <span class="stat-number">100%</span>
+                <span>Friend Satisfaction Rate</span>
+            </div>
+            <div class="stat">
+                <span class="stat-number">12%</span>
+                <span>Actual Repayment Success Rate</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <h2>Our Absurdly Official Services</h2>
+        <div class="service-grid">
+            <div class="service-card">
+                <div class="service-icon">🍕</div>
+                <h3>Group Dining Solutions</h3>
+                <p>Comprehensive meal coverage for parties of varying sizes. We specialise in restaurants where nobody bothered to check the prices beforehand, and handle that awkward moment when the bill arrives with practiced ease.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">✈️</div>
+                <h3>Holiday Booking Services</h3>
+                <p>Complete travel arrangements including flights, accommodation, and activities that seemed like a good idea at the time. Repayment plans available through a sophisticated system of polite reminders and meaningful looks.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">📺</div>
+                <h3>Entertainment Streaming Services</h3>
+                <p>Premium subscription account sharing with full access to multiple platforms. Credentials provided immediately upon request with no questions asked. Cost-sharing discussions perpetually scheduled for "next month."</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🚕</div>
+                <h3>Emergency Transport Coverage</h3>
+                <p>24-hour taxi and ride-share funding for those inevitable moments when public transport stops running and walking home is deemed "a bit far, really." Surge pricing complaints handled with resigned sighs.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🍺</div>
+                <h3>Round Management</h3>
+                <p>Professional pub round coordination featuring our time-tested "I'll get the next one" system. Includes complimentary selective memory services when it's actually someone else's turn.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🎁</div>
+                <h3>Group Gift Coordination</h3>
+                <p>Birthday and special occasion present procurement with optional "we all chipped in" narrative services. Receipt filing handled with appropriate discretion (i.e., not at all).</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <h2>Testimonials from Satisfied Debtors</h2>
+        <div class="testimonial-grid">
+            <div class="testimonial">
+                <p>"I approached Lawsons Loans for assistance with a luncheon bill and was thoroughly impressed by their complete lack of paperwork. The transaction was processed without a single form being filled out, which I found rather suspicious but delightfully efficient."</p>
+                <strong>- Dave from Accounting</strong>
+            </div>
+            <div class="testimonial">
+                <p>"Having required emergency funding for a expedition to Magaluf, I was astounded when Lawsons Loans provided the full amount with no questions asked. I've been attempting to arrange repayment since 2019, but their debt collection department appears to consist entirely of uncomfortable silences."</p>
+                <strong>- The Lads WhatsApp Group</strong>
+            </div>
+            <div class="testimonial">
+                <p>"I owe Lawsons Loans approximately £347.50 for various beverage-related incidents. Their reminder system is remarkably subtle - consisting mainly of meaningful glances and the occasional raised eyebrow. Quite civilised, really."</p>
+                <strong>- Sarah (You Know Which One)</strong>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2025 Lawsons Loans - lawsonsloans.com</p>
+        <p style="margin-top: 1rem; opacity: 0.7;">
+            <em>"Banking on friendship since the Committee for Inevitable Financial Responsibility designated us 'the one who looks like they have money' in 1847"</em>
+        </p>
+        <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.6;">
+            Disclaimer: Not recognised by the Bank of England, the Ministry of Finance, or indeed any governmental body whatsoever. 
+            Debts are enforceable only through the ancient British art of tutting and passive-aggressive WhatsApp messages. 
+            Side effects may include permanent designation as "the generous one" and mysterious wallet paralysis in others during bill-paying situations.
+            No refunds. No exchanges. No hope of getting your money back, really.
+        </p>
+        <p style="margin-top: 0.5rem; font-size: 0.8rem; opacity: 0.5;">
+            Licensed by the Department of Silly Walks. Regulated by nobody in particular. 
+            If you are dissatisfied with our service, please write your complaint on the back of a £20 note and post it to: 
+            The Committee for Dealing with Complaints We'd Rather Not Hear About, 
+            c/o The Dustbin Behind the Pub, Upper Twittington-on-the-Wold.
+        </p>
+    </footer>
+
+    <script>
+        // Smooth scrolling for CTA button
+        document.querySelector('.cta-button').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector('#services').scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+
+        // Add some interactive elements
+        const serviceCards = document.querySelectorAll('.service-card');
+        serviceCards.forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-10px) scale(1.02)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+
+        // Add floating animation to stats numbers
+        const statNumbers = document.querySelectorAll('.stat-number');
+        statNumbers.forEach((stat, index) => {
+            stat.style.animationDelay = `${index * 0.2}s`;
+            stat.style.animation = 'float 4s ease-in-out infinite';
+        });
+    </script>
+</body>
+</html>
